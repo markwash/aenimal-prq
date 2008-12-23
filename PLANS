@@ -1,0 +1,25 @@
+PRQuadtree interface:
+
+PRQ *new()
+void free(PRQ *)
+
+struct point {
+	double x, y;
+	void *data;
+};
+
+int insert(PRQ *, point_t pt)
+int remove(PRQ *, point_t pt)
+
+struct point_iter_ctx;
+
+
+plans:
+
+- associates points with values (void * generic)
+- insert and remove points
+- iterate over points in the tree
+- get nearest point to a given point
+- get k-nearest-points to a given point (as iterator?)
+- ability to efficiently move an existing point a small distance?
+  * or should this just be remove and re-insert?
